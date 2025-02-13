@@ -250,7 +250,7 @@ jobs:
       run: |
         uv venv
         uv lock --upgrade --prerelease=allow --no-build
-        uv pip install setuptools numpy Cython
+        uv pip install meson-python numpy Cython
         uv pip install --no-build-isolation --no-deps .
 
     - run: uv pip list
