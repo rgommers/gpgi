@@ -1,4 +1,4 @@
-project('gpgi', 'cython', meson_version: '>=1.5.0')
+project('gpgi', 'c', 'cython', meson_version: '>=1.5.0')
 
 py = import('python').find_installation(pure: false)
 
