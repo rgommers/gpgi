@@ -61,7 +61,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     # TODO: add --no-editable
-    - run: uv sync --group covcheck
+    - run: uv sync --no-editable --group covcheck
     - name: Test
       env:
         GPGI_PY_LIB: ${{ matrix.marker == 'PY_LIB' }}
