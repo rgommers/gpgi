@@ -52,3 +52,16 @@ py.extension_module(
     dependencies : [np_dep],
     c_args: numpy_nodepr_api,
 )
+
+# meson doesn't have an equivalent to setuptools.packages.find
+# at the time of writing, so, listing every module explicitly here
+py.install_sources(
+    'src/gpgi/__init__.py',
+    'src/gpgi/_boundaries.py',
+    'src/gpgi/_data_types.py',
+    'src/gpgi/_load.py',
+    'src/gpgi/_spatial_data.py',
+    'src/gpgi/_typing.py',
+    'src/gpgi/typing.py',
+    subdir: 'gpgi'
+)
